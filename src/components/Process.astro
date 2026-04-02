@@ -1,34 +1,28 @@
 ---
 const steps = [
   {
-    number: '01',
     title: 'Analiza i dokumentacija',
-    description: 'Prikupljamo informacije o vašem objektu i identifikujemo slabe tačke koje treba zaštititi.',
+    description: 'Prikupljamo informacije o vašem objektu i identifikujemo slabe tačke.',
   },
   {
-    number: '02',
     title: 'Planiranje i projektovanje',
-    description: 'Kreiramo prilagođen tehnički plan sigurnosnog sistema specifičnog za vaše potrebe.',
+    description: 'Kreiramo prilagođen tehnički plan specifičan za vaše potrebe.',
   },
   {
-    number: '03',
     title: 'Usaglašavanje sa klijentom',
-    description: 'Predstavljamo rešenje, odgovaramo na pitanja i prilagođavamo plan po vašim željama.',
+    description: 'Predstavljamo rešenje i prilagođavamo plan po vašim željama.',
   },
   {
-    number: '04',
     title: 'Proizvodnja solarnih stubova',
     description: 'Izrađujemo robusnu infrastrukturu po meri — stubove sa solarnim napajanjem.',
   },
   {
-    number: '05',
     title: 'Instalacija i konfiguracija',
-    description: 'Profesionalna ugradnja na terenu. Bez bušenja, bez kablova — brzo i čisto.',
+    description: 'Profesionalna ugradnja na terenu. Bez bušenja, bez kablova.',
   },
   {
-    number: '06',
     title: 'Puštanje u rad i garancija',
-    description: 'Testiramo sistem, obučavamo vas za korišćenje i pružamo garanciju na opremu.',
+    description: 'Testiramo sistem, obučavamo vas i pružamo garanciju na opremu.',
   },
 ];
 ---
@@ -40,24 +34,31 @@ const steps = [
       <h2 class="text-3xl sm:text-4xl font-bold">
         Od analize do zaštite — <span class="text-gold-500">u 6 koraka</span>
       </h2>
-      <p class="mt-4 text-text-secondary text-lg">
-        Svaki korak je osmišljen da vam pruži siguran i funkcionalan sistem bez komplikacija.
-      </p>
     </div>
 
-    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {steps.map((step) => (
-        <div class="relative p-6 rounded-xl bg-navy-800/50 border border-navy-700/30 group hover:border-gold-500/30 transition-colors">
-          <span class="text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition-colors">
-            {step.number}
-          </span>
-          <h3 class="mt-2 text-lg font-semibold text-text-primary">{step.title}</h3>
-          <p class="mt-2 text-sm text-text-secondary leading-relaxed">{step.description}</p>
+    <div class="mt-16 max-w-3xl mx-auto">
+      {steps.map((step, i) => (
+        <div class="flex gap-6 group">
+          <!-- Timeline -->
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-gold-500/10 border-2 border-gold-500/40 group-hover:border-gold-500 flex items-center justify-center transition-colors">
+              <span class="text-sm font-bold text-gold-500">{String(i + 1).padStart(2, '0')}</span>
+            </div>
+            {i < steps.length - 1 && (
+              <div class="w-px flex-1 bg-navy-700/50 my-2"></div>
+            )}
+          </div>
+
+          <!-- Content -->
+          <div class:list={["pb-10", i === steps.length - 1 && "pb-0"]}>
+            <h3 class="text-lg font-semibold text-text-primary">{step.title}</h3>
+            <p class="mt-1 text-text-secondary leading-relaxed">{step.description}</p>
+          </div>
         </div>
       ))}
     </div>
 
-    <div class="mt-10 text-center">
+    <div class="mt-12 text-center">
       <a href="#contact" class="text-gold-500 hover:text-gold-400 font-medium transition-colors">
         Započnite proces danas →
       </a>

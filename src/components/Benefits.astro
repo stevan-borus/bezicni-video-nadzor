@@ -1,33 +1,3 @@
----
-const benefits = [
-  {
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />`,
-    title: 'Mir',
-    description: 'Uvek ćete znati šta se dešava — bez nagađanja i brige. Spokojan san, svake noći.',
-  },
-  {
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />`,
-    title: 'Potpuna kontrola',
-    description: 'Pratite svoj objekat u realnom vremenu, gde god da se nalazite. Sa telefona, tableta ili računara.',
-  },
-  {
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`,
-    title: 'Zaštita koja funkcioniše',
-    description: 'Odvraća pretnje pre nego što se dese i obezbeđuje dokaz ako se dese.',
-  },
-  {
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />`,
-    title: 'Jednostavnost',
-    description: 'Sve je instalirano, podešeno i objašnjeno — bez tehničkih komplikacija. Funkcioniše od prvog dana.',
-  },
-  {
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />`,
-    title: 'Sigurnost',
-    description: 'Bilo da ste kod kuće, na poslu ili na putu — vaš objekat je zaštićen. Uvek.',
-  },
-];
----
-
 <section class="py-20 lg:py-28 bg-navy-950">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 reveal">
     <div class="text-center max-w-3xl mx-auto">
@@ -37,27 +7,71 @@ const benefits = [
       </h2>
     </div>
 
-    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {benefits.map((benefit, i) => (
-        <div class:list={[
-          "flex gap-4 p-6 rounded-xl",
-          i === benefits.length - 1 && "sm:col-span-2 lg:col-span-1"
-        ]}>
-          <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center shrink-0">
-            <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <Fragment set:html={benefit.icon} />
-            </svg>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-text-primary">{benefit.title}</h3>
-            <p class="mt-1 text-sm text-text-secondary leading-relaxed">{benefit.description}</p>
-          </div>
+    <div class="mt-16 max-w-5xl mx-auto space-y-12">
+      <div class="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+        <div class="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
         </div>
-      ))}
+        <div>
+          <h3 class="text-xl font-semibold text-text-primary">Mir</h3>
+          <p class="mt-2 text-text-secondary leading-relaxed text-lg">Uvek ćete znati šta se dešava — bez nagađanja i brige. Spokojan san, svake noći.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+        <div class="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-text-primary">Potpuna kontrola</h3>
+          <p class="mt-2 text-text-secondary leading-relaxed text-lg">Pratite svoj objekat u realnom vremenu, gde god da se nalazite. Sa telefona, tableta ili računara.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+        <div class="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-text-primary">Zaštita koja funkcioniše</h3>
+          <p class="mt-2 text-text-secondary leading-relaxed text-lg">Odvraća pretnje pre nego što se dese i obezbeđuje dokaz ako se dese.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+        <div class="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-text-primary">Jednostavnost</h3>
+          <p class="mt-2 text-text-secondary leading-relaxed text-lg">Sve je instalirano, podešeno i objašnjeno — bez tehničkih komplikacija. Funkcioniše od prvog dana.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+        <div class="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-text-primary">Sigurnost</h3>
+          <p class="mt-2 text-text-secondary leading-relaxed text-lg">Bilo da ste kod kuće, na poslu ili na putu — vaš objekat je zaštićen. Uvek.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="mt-10 text-center">
-      <a href="#contact" class="text-gold-500 hover:text-gold-400 font-medium transition-colors">
+    <div class="mt-14 text-center">
+      <a href="#contact" class="text-gold-500 hover:text-gold-400 font-medium transition-colors text-lg">
         Obezbedite svoj mir već danas →
       </a>
     </div>
