@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  /* Navy palette */
+  --color-navy-950: oklch(0.13 0.03 260);
+  --color-navy-900: oklch(0.17 0.03 260);
+  --color-navy-800: oklch(0.21 0.025 260);
+  --color-navy-700: oklch(0.28 0.02 260);
+
+  /* Gold palette */
+  --color-gold-600: oklch(0.60 0.15 85);
+  --color-gold-500: oklch(0.72 0.15 85);
+  --color-gold-400: oklch(0.78 0.13 85);
+
+  /* Text */
+  --color-text-primary: oklch(0.96 0.01 260);
+  --color-text-secondary: oklch(0.65 0.02 260);
+
+  /* Utility */
+  --color-success: oklch(0.72 0.19 145);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-navy-950);
+  color: var(--color-text-primary);
+}
