@@ -14,7 +14,7 @@
 
   /* Text */
   --color-text-primary: oklch(0.96 0.01 260);
-  --color-text-secondary: oklch(0.65 0.02 260);
+  --color-text-secondary: oklch(0.75 0.02 260);
 
   /* Utility */
   --color-success: oklch(0.72 0.19 145);
