@@ -1,0 +1,66 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Analiza i dokumentacija',
+    description: 'Prikupljamo informacije o vašem objektu i identifikujemo slabe tačke koje treba zaštititi.',
+  },
+  {
+    number: '02',
+    title: 'Planiranje i projektovanje',
+    description: 'Kreiramo prilagođen tehnički plan sigurnosnog sistema specifičnog za vaše potrebe.',
+  },
+  {
+    number: '03',
+    title: 'Usaglašavanje sa klijentom',
+    description: 'Predstavljamo rešenje, odgovaramo na pitanja i prilagođavamo plan po vašim željama.',
+  },
+  {
+    number: '04',
+    title: 'Proizvodnja solarnih stubova',
+    description: 'Izrađujemo robusnu infrastrukturu po meri — stubove sa solarnim napajanjem.',
+  },
+  {
+    number: '05',
+    title: 'Instalacija i konfiguracija',
+    description: 'Profesionalna ugradnja na terenu. Bez bušenja, bez kablova — brzo i čisto.',
+  },
+  {
+    number: '06',
+    title: 'Puštanje u rad i garancija',
+    description: 'Testiramo sistem, obučavamo vas za korišćenje i pružamo garanciju na opremu.',
+  },
+];
+---
+
+<section id="process" class="py-20 lg:py-28 bg-navy-900">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-gold-500 mb-4">Kako radimo</p>
+      <h2 class="text-3xl sm:text-4xl font-bold">
+        Od analize do zaštite — <span class="text-gold-500">u 6 koraka</span>
+      </h2>
+      <p class="mt-4 text-text-secondary text-lg">
+        Svaki korak je osmišljen da vam pruži siguran i funkcionalan sistem bez komplikacija.
+      </p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {steps.map((step) => (
+        <div class="relative p-6 rounded-xl bg-navy-800/50 border border-navy-700/30 group hover:border-gold-500/30 transition-colors">
+          <span class="text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition-colors">
+            {step.number}
+          </span>
+          <h3 class="mt-2 text-lg font-semibold text-text-primary">{step.title}</h3>
+          <p class="mt-2 text-sm text-text-secondary leading-relaxed">{step.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="#contact" class="text-gold-500 hover:text-gold-400 font-medium transition-colors">
+        Započnite proces danas →
+      </a>
+    </div>
+  </div>
+</section>

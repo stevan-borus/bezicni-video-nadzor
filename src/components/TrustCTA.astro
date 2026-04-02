@@ -1,0 +1,51 @@
+---
+const trustItems = [
+  'Profesionalna instalacija (nije „uradi sam" rešenje)',
+  'Prilagođeno vašem konkretnom objektu',
+  'Pouzdana i kvalitetna oprema',
+  'Podrška i nakon instalacije',
+  'Namenjeno vlasnicima kuća i poslovnim korisnicima',
+];
+---
+
+<section id="contact" class="py-20 lg:py-28 bg-navy-950">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Trust badges -->
+    <div class="max-w-3xl mx-auto">
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+        {trustItems.map((item) => (
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-success shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-sm text-text-secondary">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA block -->
+    <div class="mt-16 max-w-2xl mx-auto text-center">
+      <div class="p-8 sm:p-12 rounded-2xl bg-gradient-to-b from-navy-800 to-navy-900 border border-navy-700/50 shadow-2xl">
+        <h2 class="text-3xl sm:text-4xl font-bold">
+          Zakažite <span class="text-gold-500">besplatnu procenu</span> bezbednosti
+        </h2>
+
+        <p class="mt-4 text-text-secondary text-lg leading-relaxed">
+          Procenićemo vaš objekat, otkriti slabe tačke i preporučiti najbolje rešenje — bez obaveza i bez pritiska.
+        </p>
+
+        <a
+          href="https://bezicnivideonadzor.rs/kontakt/"
+          class="inline-flex items-center mt-8 px-10 py-4 rounded-lg bg-gold-500 text-navy-950 font-bold text-lg hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/20 hover:shadow-gold-500/30 hover:scale-105"
+        >
+          Zakažite besplatnu konsultaciju
+        </a>
+
+        <p class="mt-4 text-sm text-text-secondary">
+          Bez obaveza. Odgovorićemo u roku od 24h.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
