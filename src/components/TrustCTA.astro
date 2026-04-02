@@ -76,6 +76,8 @@ const trustItems = [
                 id="phone"
                 name="phone"
                 required
+                pattern="[\+]?[0-9\s\-]{6,20}"
+                title="Unesite validan broj telefona (samo cifre, + i razmaci)"
                 class="w-full px-4 py-3 rounded-lg bg-navy-950/50 border border-navy-700/50 text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/20 transition-colors"
                 placeholder="+381..."
               />
@@ -119,6 +121,12 @@ const trustItems = [
 </section>
 
 <script>
+  // Phone field: only allow +, digits, spaces, and dashes
+  const phoneInput = document.getElementById('phone') as HTMLInputElement;
+  phoneInput?.addEventListener('input', () => {
+    phoneInput.value = phoneInput.value.replace(/[^\d+\s\-]/g, '');
+  });
+
   const form = document.getElementById('contact-form') as HTMLFormElement;
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
